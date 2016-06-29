@@ -7,9 +7,6 @@ require_once 'includes/config.inc.php';
 
 $masRunning = "masRunning.php";
     if(file_exists($masRunning)==false){
-        system('echo ciao');
-        system('start cmd');
-        system('start" -bat /DALI/startmas.bat"');
         system('cd /DALI && sh ./startmas.sh');
         $handle = fopen($masRunning, 'w') or die('Cannot open file:  '.$masRunning); 
         $data = '';
